@@ -30,6 +30,17 @@
 export default {
     name: 'Home',
 
+    metaInfo: {
+        title: "Ananda Vj's Portofolio",
+        meta: [
+            {
+                vmid:'Home',
+                name: "Ananda Vj's Portofolio",
+                content: "Ananda Vj's Portofolio"
+            }
+        ]
+    },
+
     data() {
         return {
             contacts: [

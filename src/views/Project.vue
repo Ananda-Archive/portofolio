@@ -22,7 +22,7 @@
                                         </v-img>
                                     </div>
                                     <div class="white--text mt-n5">
-                                        <v-card-title class="text-h5 text-justify">{{item.title}}</v-card-title>
+                                        <v-card-title class="text-h5 text-left">{{item.title}}</v-card-title>
                                         <v-card-subtitle class="text-left mb-n6" v-if="data.title == 'Experience'">{{item.date}}</v-card-subtitle>
                                         <v-card-subtitle class="text-justify text-subtitle-2 font-weight-regular mt-n2">{{item.desc}} <span v-if="item.link != NULL"><a class="blue--text" :href="item.link" target="_blank">Here</a></span> </v-card-subtitle>
                                     </div>
@@ -47,7 +47,7 @@
                                         </v-row>
                                     </template>
                                 </v-img>
-                                <v-card-title class="text-h5 text-justify">{{item.title}}</v-card-title>
+                                <v-card-title class="text-h6 text-justify">{{item.title}}</v-card-title>
                                 <v-card-subtitle class="text-left mb-n6" v-if="data.title == 'Experience'">{{item.date}}</v-card-subtitle>
                                 <v-card-subtitle class="text-justify text-subtitle-2 font-weight-regular mt-n2">{{item.desc}} <span v-if="item.link != NULL"><a class="blue--text" :href="item.link" target="_blank">Here</a></span> </v-card-subtitle>
                             </v-alert>
@@ -63,6 +63,17 @@
 export default {
     name: "Project",
 
+    metaInfo: {
+        title: "Ananda Vj's Project",
+        meta: [
+            {
+                vmid:'Project',
+                name: "Ananda Vj's Project",
+                content: "Ananda Vj's Project"
+            }
+        ]
+    },
+
     data() {
         return {
             datas: [
@@ -71,13 +82,13 @@ export default {
                     items: [
                         {
                             title: 'Fullstack Web Developer at Cari-rumah.com',
-                            desc: 'This is my first big project. I used Vue.js as Front-end Framework, Firebase as authentication, and CodeIgniter 3 for REST API. The Deadline is 7 weeks. You can visit the website',
+                            desc: 'This is my first big project. I use Vue.js as Front-end Framework, Firebase as authentication, and CodeIgniter 3 for REST API. The Deadline was 7 weeks. You can visit the website',
                             img: "https://firebasestorage.googleapis.com/v0/b/ananda-vj.appspot.com/o/carirumah.PNG?alt=media&token=5edeecd1-a3f7-4408-a84f-947c73d0dafa",
                             link: "https://cari-rumah.com"
                         },
                         {
                             title: 'Project Manager and Front-end Developer at BPI as Internship',
-                            desc: "This time I worked as a team of 3 people. We made a Product, Stock, and Price Management Internal website at Buana Paksa Indonesia. As a Front-end web developer, my job is to design the web, manage the json data both sent and received. Also I worked as Project Manager. My job is to ensure that the website requirement fulfill the client wish and manage the team. We used Vue.js as Front-end Framework, Firebase as authentication, and CodeIgniter 3 for REST API. This is classified project so I can't show you the complete project nor the source code.",
+                            desc: "This time I worked as a team of 3 people. We made a Product, Stock, and Price Management Internal website at Buana Paksa Indonesia. As a Front-end web developer, my job is to design the web, manage the json data both sent and received. Also I worked as Project Manager. My job is to ensure that the website requirement fulfill the client wishes and manage the team. We use Vue.js as Front-end Framework, Firebase as authentication, and CodeIgniter 3 for REST API. This is classified project so I can't show you the complete project nor the source code.",
                             img: "https://firebasestorage.googleapis.com/v0/b/ananda-vj.appspot.com/o/bpi.PNG?alt=media&token=bc6ecbc0-977b-4529-961d-c1f2fa2e0ad0",
                             link: null
                         },
@@ -126,5 +137,7 @@ export default {
 </script>
 
 <style>
-
+    .v-card__text, .v-card__title {
+    word-break: normal; /* maybe !important  */
+    }
 </style>
